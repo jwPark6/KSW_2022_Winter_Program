@@ -1,0 +1,961 @@
+[
+    {
+        "id": "4e61bceb49cf66cf",
+        "type": "tab",
+        "label": "플로우 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "eba5cf6ce12ef8e4",
+        "type": "tab",
+        "label": "플로우 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "67c61941.053d58",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "dbeae5430b4bc5a3",
+        "type": "serial-port",
+        "serialport": "/dev/tty.usbmodem14301",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "a3819a376e50b578",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "a20790fc4e8e0ca2",
+        "type": "ui_tab",
+        "name": "Parking Management",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6aeb6ccf14b443cd",
+        "type": "ui_group",
+        "name": "Controller",
+        "tab": "a20790fc4e8e0ca2",
+        "order": 1,
+        "disp": true,
+        "width": "5",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f835c5eff995985c",
+        "type": "ui_group",
+        "name": "View",
+        "tab": "a20790fc4e8e0ca2",
+        "order": 2,
+        "disp": true,
+        "width": "14",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c77209e9eac23680",
+        "type": "ui_group",
+        "name": "Status",
+        "tab": "a20790fc4e8e0ca2",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8e403f6af717befd",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c569e95d.e2ea7",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 1
+    },
+    {
+        "id": "99b36f6.7a6d29",
+        "type": "ui_tab",
+        "name": "SVG LED",
+        "icon": "dashboard"
+    },
+    {
+        "id": "e4c8df5a.bc9048",
+        "type": "ui_tab",
+        "z": "4e61bceb49cf66cf",
+        "name": "tab2",
+        "icon": "dashboard"
+    },
+    {
+        "id": "3c22036ae1f84e8b",
+        "type": "ui_spacer",
+        "z": "4e61bceb49cf66cf",
+        "name": "spacer",
+        "group": "6aeb6ccf14b443cd",
+        "order": 17,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "8b2013191c96a8b9",
+        "type": "ui_spacer",
+        "z": "4e61bceb49cf66cf",
+        "name": "spacer",
+        "group": "6aeb6ccf14b443cd",
+        "order": 18,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "3410f3b571c03c22",
+        "type": "ui_spacer",
+        "z": "4e61bceb49cf66cf",
+        "name": "spacer",
+        "group": "6aeb6ccf14b443cd",
+        "order": 19,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "63617354c4dfb6ed",
+        "type": "ui_group",
+        "z": "4e61bceb49cf66cf",
+        "name": "Default",
+        "tab": "e4c8df5a.bc9048",
+        "order": 1,
+        "disp": true,
+        "width": "6"
+    },
+    {
+        "id": "04180a8d3193a792",
+        "type": "websocket-listener",
+        "path": "/ws/manager",
+        "wholemsg": "false"
+    },
+    {
+        "id": "b586a8f7.e060e8",
+        "type": "ui_group",
+        "name": "groov RIO",
+        "tab": "c40344b0.c82658",
+        "order": 1,
+        "disp": true,
+        "width": "26",
+        "collapse": false
+    },
+    {
+        "id": "c40344b0.c82658",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "e8a574382610dca5",
+        "type": "websocket-listener",
+        "path": "/ws/user",
+        "wholemsg": "false"
+    },
+    {
+        "id": "209189385f38e806",
+        "type": "serial in",
+        "z": "4e61bceb49cf66cf",
+        "name": "from uno",
+        "serial": "dbeae5430b4bc5a3",
+        "x": 260,
+        "y": 520,
+        "wires": [
+            [
+                "5c45a6b2b5085572"
+            ]
+        ]
+    },
+    {
+        "id": "963160b2ac865a44",
+        "type": "serial out",
+        "z": "4e61bceb49cf66cf",
+        "name": "to uno",
+        "serial": "dbeae5430b4bc5a3",
+        "x": 610,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "3ac536cb37a80d52",
+        "type": "http in",
+        "z": "4e61bceb49cf66cf",
+        "name": "",
+        "url": "/user",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "8485bd37b61b7263"
+            ]
+        ]
+    },
+    {
+        "id": "ace9f9338c14336a",
+        "type": "http response",
+        "z": "4e61bceb49cf66cf",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7f728758c18e6d8e",
+        "type": "template",
+        "z": "4e61bceb49cf66cf",
+        "name": "HTML",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html>\n  <head>\n    <meta charset=\"UTF-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />\n    <title>Smart Parking System</title>\n    <link\n      rel=\"stylesheet\"\n      href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css\"\n    />\n    <script src=\"https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js\"></script>\n    <link\n      rel=\"stylesheet\"\n      href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\"\n    />\n\n    {{!--<link rel=\"stylesheet\" href=\"customer.css\" />--}}\n    <style>{{{payload.css}}}</style>\n  </head>\n  <body onload=\"wsConnect();\" onunload=\"ws.disconnect();\">\n    <h1>Smart Parking Lot</h1>\n    <div class=\"content\">\n      <div class=\"view row\">\n        <input type=\"checkbox\" id=\"r1\" onclick=\"selectSpot()\" disabled />\n        <label id=\"A01\" class=\"viewmode col\" for=\"r1\">\n          <div class=\"col1\">A01</div></label\n        >\n        <input type=\"checkbox\" id=\"r2\" onclick=\"selectSpot()\" disabled />\n        <label id=\"A02\" class=\"viewmode col\" for=\"r2\"\n          ><div class=\"col1\">A02</div></label\n        >\n          \n        <input type=\"checkbox\" id=\"r3\" onclick=\"selectSpot()\" disabled />\n        <label id=\"A03\" class=\"viewmode col\" for=\"r3\"\n          ><div class=\"col1\">A03</div></label\n        >\n          \n        <input type=\"checkbox\" id=\"r4\" onclick=\"selectSpot()\" disabled />\n        <label id=\"A04\" class=\"viewmode col\" for=\"r4\"\n          ><div class=\"col1\">A04</div></label\n        >\n          \n      </div>\n      <div class=\"view row\">\n        <input type=\"checkbox\" id=\"r5\" onclick=\"selectSpot()\" disabled />\n        <label id=\"A05\" class=\"viewmode col\" for=\"r5\"\n          >\n          <div class=\"col2\">A05</div></label\n        >\n        <input type=\"checkbox\" id=\"r6\" onclick=\"selectSpot()\" disabled />\n        <label id=\"A06\" class=\"viewmode col\" for=\"r6\"\n          >\n          <div class=\"col2\">A06</div></label\n        >\n        <input type=\"checkbox\" id=\"r7\" onclick=\"selectSpot()\" disabled />\n        <label id=\"A07\" class=\"viewmode col\" for=\"r7\"\n          >\n          <div class=\"col2\">A07</div></label\n        >\n        <input type=\"checkbox\" id=\"r8\" onclick=\"selectSpot()\" disabled />\n        <label id=\"A08\" class=\"viewmode col\" for=\"r8\"\n          >\n          <div class=\"col2\">A08</div></label\n        >\n      </div>\n    </div>\n    <div class=\"status\">\n        <div class=\"sidebar-menu\">\n            <div class=\"section-ti\">Section</div>\n            <div class=\"section-list\">\n            </div>\n          </div>\n        </ul>\n    </div>\n    <script>{{{payload.js}}}</script>\n    {{!--<script type=\"text/javascript\" src=\"customer.js\"></script>--}}\n  </body>\n</html>\n",
+        "output": "str",
+        "x": 670,
+        "y": 120,
+        "wires": [
+            [
+                "ace9f9338c14336a"
+            ]
+        ]
+    },
+    {
+        "id": "9fdb8eaa15249c5f",
+        "type": "template",
+        "z": "4e61bceb49cf66cf",
+        "name": "CSS",
+        "field": "payload.css",
+        "fieldType": "msg",
+        "format": "css",
+        "syntax": "mustache",
+        "template": "h1 {\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n\n  height: 75px;\n  padding: 1rem;\n  color: white;\n  background: #2b2b40;\n  font-weight: bold;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  z-index: 1;\n}\n.status {\n  list-style-type: none;\n  background-color: #151521;\n  width: 20%;\n  padding: 0;\n  margin: 0;\n  right: 0;\n  position: fixed;\n  height: 100%;\n  overflow: auto;\n  top: 75px;\n  display: block;\n  color: white;\n  z-index: 3;\n}\n.sidebar-menu {\n  padding-top: 15px;\n  padding-bottom: 15px;\n  padding-left: 20px;\n  padding-right: 20px;\n  font-weight: bold;\n  font-size: 30px;\n  /* border-bottom: white 1px dotted; */\n}\n.section-ti {\n  display: inline-block;\n}\n.section-item {\n  background-color: #1e1e2d;\n  border-radius: 10px;\n  padding: 8px 15px;\n  font-size: 20px;\n  margin: 15px;\n  display: flex;\n  align-items: center !important;\n  justify-content: space-between;\n}\n.section-information {\n  display: flex;\n  align-items: center !important;\n}\n.section-item .section-circle {\n  display: inline-block;\n  width: 35px;\n  height: 35px;\n  border-radius: 10px;\n}\n.section-circle.circle-red {\n  background-color: #ff0000;\n}\n.section-circle.circle-green {\n  background-color: #00c700;\n}\n.section-circle.circle-blue {\n  background-color: #009dff;\n}\n.section-circle.circle-cyan {\n  background-color: #7fccde;\n}\n.section-circle.circle-yellow {\n  background-color: #f0d264;\n}\n.section-circle.circle-purple {\n  background-color: #cb99c5;\n}\n.section-circle.circle-default {\n  background-color: #d3d3d3;\n}\n.section-item .section-name {\n  margin-left: 10px;\n}\n.section-number {\n  font-size: 30px;\n}\n\n.content {\n  padding: 20px 100px;\n  margin-top: 75px;\n  margin-right: 20%;\n}\n.view .col {\n  margin: 10px;\n  padding: 10px;\n  border-radius: 15px;\n  height: 100%;\n  background-color: #d3d3d3;\n  color: white;\n  transition: all 0.2s ease-in-out;\n  text-align: center;\n}\n.content .row {\n  margin-bottom: 3em;\n  height: 22em;\n}\n.col1 {\n  text-align: center;\n  font-size: 30px;\n}\n\n.col2 {\n  position: absolute;\n  left: 50%;\n  transform: translate(-50%, 0);\n  bottom: 15px;\n  font-size: 30px;\n}\n.row input[type=\"checkbox\"] {\n  display: none;\n}\n.car {\n  visibility: hidden;\n  -webkit-user-drag: none;\n}\n\n.car.in {\n  visibility: visible;\n  animation: slidein 0.5s;\n  animation-fill-mode: forwards;\n}\n\n.car.out {\n  visibility: visible;\n  animation: slideout 0.5s;\n  animation-fill-mode: forwards;\n}\n\n@media (max-width: 700px) {\n  .content .row {\n    height: 13em;\n  }\n  .status {\n    position: static;\n    width: 100%;\n  }\n  .content {\n    padding: 20px 20px;\n    margin-right: 0;\n  }\n}\n",
+        "output": "str",
+        "x": 550,
+        "y": 120,
+        "wires": [
+            [
+                "7f728758c18e6d8e"
+            ]
+        ]
+    },
+    {
+        "id": "8485bd37b61b7263",
+        "type": "template",
+        "z": "4e61bceb49cf66cf",
+        "name": "js",
+        "field": "payload.js",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "// For Node-Red Web Socket\nvar ws;\nvar wsUri = \"ws:\";\nvar loc = window.location;\nconsole.log(loc);\nif (loc.protocol === \"https:\") { wsUri = \"wss:\"; }\n// This needs to point to the web socket in the Node-RED flow\nwsUri += \"//\" + loc.host + loc.pathname.replace(\"user\",\"ws/user\");\n        \nfunction wsConnect() {\n    console.log(\"connect\",wsUri);\n    ws = new WebSocket(wsUri);\n    //var line = \"\";    // either uncomment this for a building list of messages\n    ws.onmessage = function(msg) {\n        var line = \"\";  // or uncomment this to overwrite the existing message\n        // parse the incoming message as a JSON object\n        \n        var data = msg.data;\n        var json = JSON.parse(data);\n        var area = json.area;\n        var color = json.color.split(\",\");\n        var name = json.name.split(\",\");\n        colorSetting(area);\n        statusSetting(color, name);\n        updateSectionCount();\n        // build the output from the topic and payload parts of the object\n        line += \"<p>\"+data+\"</p>\";\n        // replace the messages div with the new \"line\"\n        // document.getElementById('messages').innerHTML = line;\n        //ws.send(JSON.stringify({data:data}));\n    }\n    ws.onopen = function() {\n        // update the status div with the connection status\n        // document.getElementById('status').innerHTML = \"connected\";\n        //ws.send(\"Open for data\");\n        console.log(\"connected\");\n    }\n    ws.onclose = function() {\n        // update the status div with the connection status\n        // document.getElementById('status').innerHTML = \"not connected\";\n        // in case of lost connection tries to reconnect every 3 secs\n        setTimeout(wsConnect,3000);\n    }\n}\n////////\n\nvar areaCount = 8;\nvar redColor = \"#ff0000\";\nvar greenColor = \"#00c700\";\nvar blueColor = \"#009dff\";\nvar yellowColor = \"#f0d264\";\nvar purpleColor = \"#cb99c5\";\nvar cyanColor = \"#7fccde\";\nvar defaultColor = \"#d3d3d3\";\n\n\nfunction colorSetting(color) {\n  var arr = color.split(\"\");\n  for (var i = 0; i < areaCount; i++) {\n    var id = \"A0\" + (i + 1);\n    var areaStyle = document.getElementById(id).style;\n    if (arr[i] == 0) {\n      areaStyle.backgroundColor = defaultColor;\n    } else if (arr[i] == 1) {\n      areaStyle.backgroundColor = redColor;\n    } else if (arr[i] == 2) {\n      areaStyle.backgroundColor = greenColor;\n    } else if (arr[i] == 3) {\n      areaStyle.backgroundColor = blueColor;\n    } else if (arr[i] == 4) {\n      areaStyle.backgroundColor = yellowColor;\n    } else if (arr[i] == 5) {\n      areaStyle.backgroundColor = purpleColor;\n    } else if (arr[i] == 6) {\n      areaStyle.backgroundColor = cyanColor;\n    }\n  }\n}\n\nfunction statusSetting(colorArr, nameArr) {\n  var html = \"\";\n  var item = document.getElementsByClassName(\"section-list\");\n  for (var i = 0; i < colorArr.length; i++) {\n    html +=\n      '<div class=\"section-item\"><div class=\"section-information\"><div class=\"section-circle circle-' +\n      colorArr[i] +\n      '\"></div><div class=\"section-name\">' +\n      nameArr[i] +\n      '</div></div><div class=\"section-number number-'+\n      colorArr[i] +'\"></div></div>';\n  }\n  html +=\n    '<div class=\"section-item\"><div class=\"section-information\"><div class=\"section-circle circle-default\"></div><div class=\"section-name\">No Section</div></div><div class=\"section-number number-default\"></div></div><div class=\"section-item\"><div class=\"section-name\">Total</div><div class=\"section-number number-total\"></div></div>';\n  item[0].innerHTML = html;\n}\n\nfunction updateSectionCount() {\n  var countArr = [0, 0, 0, 0, 0, 0, 0];\n  for (var i = 1; i <= areaCount; i++) {\n    var area = \"A0\" + i;\n    var backgroundColor = document.getElementById(area).style.backgroundColor;\n    var hex = rgbToHex(backgroundColor);\n    if (hex == redColor) {\n      countArr[0]++;\n    } else if (hex == greenColor) {\n      countArr[1]++;\n    } else if (hex == blueColor) {\n      countArr[2]++;\n    } else if (hex == yellowColor) {\n      countArr[3]++;\n    } else if (hex == purpleColor) {\n      countArr[4]++;\n    } else if (hex == cyanColor) {\n      countArr[5]++;\n    } else {\n      countArr[6]++;\n    }\n  }\n  var sectionNumber = document.getElementsByClassName(\"section-number\");\n\n  for (let i = 0; i < sectionNumber.length; i++) {\n    var sectionNumberClass = sectionNumber[i].classList[1];\n\n    if (sectionNumberClass == \"number-red\") {\n      sectionNumber[i].innerHTML = countArr[0];\n    } else if (sectionNumberClass == \"number-green\") {\n      sectionNumber[i].innerHTML = countArr[1];\n    } else if (sectionNumberClass == \"number-blue\") {\n      sectionNumber[i].innerHTML = countArr[2];\n    } else if (sectionNumberClass == \"number-yellow\") {\n      sectionNumber[i].innerHTML = countArr[3];\n    } else if (sectionNumberClass == \"number-purple\") {\n      sectionNumber[i].innerHTML = countArr[4];\n    } else if (sectionNumberClass == \"number-cyan\") {\n      sectionNumber[i].innerHTML = countArr[5];\n    }\n  }\n  document.getElementsByClassName(\"number-default\")[0].innerHTML = countArr[6];\n  document.getElementsByClassName(\"number-total\")[0].innerHTML = areaCount;\n}\n\nfunction rgbToHex(rgbType) {\n  var rgb = rgbType.replace(/[^%,.\\d]/g, \"\").split(\",\");\n\n  rgb.forEach(function (str, x, arr) {\n    if (str.indexOf(\"%\") > -1) str = Math.round(parseFloat(str) * 2.55);\n    str = parseInt(str, 10).toString(16);\n    if (str.length === 1) str = \"0\" + str;\n    arr[x] = str;\n  });\n  return \"#\" + rgb.join(\"\");\n}\n",
+        "output": "str",
+        "x": 430,
+        "y": 120,
+        "wires": [
+            [
+                "9fdb8eaa15249c5f"
+            ]
+        ]
+    },
+    {
+        "id": "480867d935bf5ab6",
+        "type": "http in",
+        "z": "4e61bceb49cf66cf",
+        "name": "",
+        "url": "/manager",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 260,
+        "y": 220,
+        "wires": [
+            [
+                "00abf433adfdde7f"
+            ]
+        ]
+    },
+    {
+        "id": "00abf433adfdde7f",
+        "type": "template",
+        "z": "4e61bceb49cf66cf",
+        "name": "js",
+        "field": "payload.js",
+        "fieldType": "msg",
+        "format": "javascript",
+        "syntax": "mustache",
+        "template": "// For Node-Red Web Socket\nvar ws;\nvar wsUri = \"ws:\";\nvar loc = window.location;\nconsole.log(loc);\nif (loc.protocol === \"https:\") { wsUri = \"wss:\"; }\n// This needs to point to the web socket in the Node-RED flow\nwsUri += \"//\" + loc.host + loc.pathname.replace(\"manager\",\"ws/manager\");\n        \nfunction wsConnect() {\n    console.log(\"connect\",wsUri);\n    ws = new WebSocket(wsUri);\n    //var line = \"\";    // either uncomment this for a building list of messages\n    ws.onmessage = function(msg) {\n        var line = \"\";  // or uncomment this to overwrite the existing message\n        // parse the incoming message as a JSON object\n        var data = msg.data;\n        parking(data);\n        console.log(data);\n        // build the output from the topic and payload parts of the object\n        line += \"<p>\"+data+\"</p>\";\n        // replace the messages div with the new \"line\"\n        // document.getElementById('messages').innerHTML = line;\n        //ws.send(JSON.stringify({data:data}));\n    }\n    ws.onopen = function() {\n        // update the status div with the connection status\n        // document.getElementById('status').innerHTML = \"connected\";\n        //ws.send(\"Open for data\");\n        console.log(\"connected\");\n        sendToNodered();\nsendToUser()\n    }\n    ws.onclose = function() {\n        // update the status div with the connection status\n        // document.getElementById('status').innerHTML = \"not connected\";\n        // in case of lost connection tries to reconnect every 3 secs\n        setTimeout(wsConnect,3000);\n    }\n}\n////////\nvar areaCount = 8;\nvar redColor = \"#ff0000\";\nvar greenColor = \"#00c700\";\nvar blueColor = \"#009dff\";\nvar yellowColor = \"#f0d264\";\nvar purpleColor = \"#cb99c5\";\nvar cyanColor = \"#7fccde\";\nvar defaultColor = \"#d3d3d3\";\n\nvar allColorList = [\n  redColor,\n  greenColor,\n  blueColor,\n  yellowColor,\n  purpleColor,\n  cyanColor,\n];\nvar existColorList = [\"red\", \"green\", \"blue\"];\nvar existNameList = [\"Student\", \"Professor\", \"Visitor\"];\n\nupdateSectionCount();\nsendToNodered();\nsendToUser();\n\nfunction changeColor(color) {\n  for (var i = 1; i <= areaCount; i++) {\n    var id = \"r\" + i;\n    var area = \"A0\" + i;\n    if (document.getElementById(id).checked) {\n      document.getElementById(area).style.backgroundColor = color;\n      document.getElementById(id).checked = false;\n    }\n  }\n  //   var x = document.getElementById(\"snackbar\");\n  //   snackbar.className = \"hide\";\n  //   setTimeout(function () {\n  //     snackbar.className = snackbar.className.replace(\"hide\", \"\");\n  //   }, 500);\n  updateSectionCount();\n  sendToNodered();\nsendToUser()\n}\n\nfunction selectSpot() {\n  var check = 0;\n  var x = document.getElementById(\"snackbar\");\n  for (var i = 1; i <= areaCount; i++) {\n    var id = \"r\" + i;\n    if (document.getElementById(id).checked) {\n      check = 1;\n    }\n  }\n  //   if (check == 1) {\n  //     document.getElementsByClassName(\"choose-message\")[0].style.display = \"none\";\n  //     document.getElementsByClassName(\"color\")[0].style.display = \"block\";\n  //   } else {\n  //     document.getElementsByClassName(\"choose-message\")[0].style.display =\n  //       \"block\";\n  //     document.getElementsByClassName(\"color\")[0].style.display = \"none\";\n  //   }\n}\n\nfunction updateSectionCount() {\n  var countArr = [0, 0, 0, 0, 0, 0, 0];\n  for (var i = 1; i <= areaCount; i++) {\n    var area = \"A0\" + i;\n    var backgroundColor = document.getElementById(area).style.backgroundColor;\n    var hex = rgbToHex(backgroundColor);\n    if (hex == redColor) {\n      countArr[0]++;\n    } else if (hex == greenColor) {\n      countArr[1]++;\n    } else if (hex == blueColor) {\n      countArr[2]++;\n    } else if (hex == yellowColor) {\n      countArr[3]++;\n    } else if (hex == purpleColor) {\n      countArr[4]++;\n    } else if (hex == cyanColor) {\n      countArr[5]++;\n    } else {\n      countArr[6]++;\n    }\n  }\n  var sectionNumber = document.getElementsByClassName(\"section-number\");\n\n  for (let i = 0; i < sectionNumber.length; i++) {\n    var sectionNumberClass = sectionNumber[i].classList[1];\n\n    if (sectionNumberClass == \"number-red\") {\n      sectionNumber[i].innerHTML = countArr[0];\n    } else if (sectionNumberClass == \"number-green\") {\n      sectionNumber[i].innerHTML = countArr[1];\n    } else if (sectionNumberClass == \"number-blue\") {\n      sectionNumber[i].innerHTML = countArr[2];\n    } else if (sectionNumberClass == \"number-yellow\") {\n      sectionNumber[i].innerHTML = countArr[3];\n    } else if (sectionNumberClass == \"number-purple\") {\n      sectionNumber[i].innerHTML = countArr[4];\n    } else if (sectionNumberClass == \"number-cyan\") {\n      sectionNumber[i].innerHTML = countArr[5];\n    }\n  }\n  document.getElementsByClassName(\"number-default\")[0].innerHTML = countArr[6];\n  document.getElementsByClassName(\"number-total\")[0].innerHTML = areaCount;\n}\n\nfunction rgbToHex(rgbType) {\n  var rgb = rgbType.replace(/[^%,.\\d]/g, \"\").split(\",\");\n\n  rgb.forEach(function (str, x, arr) {\n    if (str.indexOf(\"%\") > -1) str = Math.round(parseFloat(str) * 2.55);\n    str = parseInt(str, 10).toString(16);\n    if (str.length === 1) str = \"0\" + str;\n    arr[x] = str;\n  });\n  return \"#\" + rgb.join(\"\");\n}\n\nfunction nameToHex(name) {\n  if (name === \"red\") {\n    return redColor;\n  } else if (name === \"green\") {\n    return greenColor;\n  } else if (name === \"blue\") {\n    return blueColor;\n  } else if (name === \"yellow\") {\n    return yellowColor;\n  } else if (name === \"purple\") {\n    return purpleColor;\n  } else if (name === \"cyan\") {\n    return cyanColor;\n  }\n}\n\nfunction rgbToName(rgb) {\n  if (rgb === \"rgb(255, 0, 0)\") {\n    return \"red\";\n  } else if (rgb === \"rgb(0, 199, 0)\") {\n    return \"green\";\n  } else if (rgb === \"rgb(0, 157, 255)\") {\n    return \"blue\";\n  } else if (rgb === \"rgb(240, 210, 100)\") {\n    return \"yellow\";\n  } else if (rgb === \"rgb(203, 153, 197)\") {\n    return \"purple\";\n  } else if (rgb === \"rgb(127, 204, 222)\") {\n    return \"cyan\";\n  }\n}\n\nfunction hexToName(hex) {\n  if (hex == redColor) {\n    return \"red\";\n  } else if (hex == greenColor) {\n    return \"green\";\n  } else if (hex == blueColor) {\n    return \"blue\";\n  } else if (hex == yellowColor) {\n    return \"yellow\";\n  } else if (hex == purpleColor) {\n    return \"purple\";\n  } else if (hex == cyanColor) {\n    return \"cyan\";\n  }\n}\n\nfunction openPalette() {\n  var paletteStyle = document.getElementsByClassName(\"color-palette\")[0].style;\n  var snackbar = document.getElementById(\"snackbar\");\n  var modeIcon = document.getElementById(\"mode-icon\");\n\n  if (paletteStyle.maxHeight) {\n    paletteStyle.maxHeight = null;\n    for (var i = 1; i <= areaCount; i++) {\n      var inputId = \"r\" + i;\n      var labelId = \"A0\" + i;\n      document.getElementById(inputId).disabled = true;\n      document.getElementById(inputId).checked = false;\n      document.getElementById(labelId).className = \"viewmode col\";\n    }\n    document.getElementsByClassName(\"snackbar-item\")[0].innerHTML =\n      \"<i class='fa fa-eye'></i> View Mode\";\n    snackbar.className = \"show\";\n    setTimeout(function () {\n      snackbar.className = snackbar.className.replace(\"show\", \"\");\n    }, 3000);\n    modeIcon.className = \"fa fa-eye\";\n  } else {\n    paletteStyle.maxHeight =\n      document.getElementsByClassName(\"color-palette\")[0].scrollHeight + \"px\";\n    for (var i = 1; i <= areaCount; i++) {\n      var inputId = \"r\" + i;\n      var labelId = \"A0\" + i;\n      document.getElementById(inputId).disabled = false;\n      document.getElementById(labelId).className = \"whatever col\";\n    }\n    document.getElementsByClassName(\"snackbar-item\")[0].innerHTML =\n      \"<i class='fa fa-edit'></i> Color Setting Mode\";\n    snackbar.className = \"show\";\n    setTimeout(function () {\n      snackbar.className = snackbar.className.replace(\"show\", \"\");\n    }, 3000);\n    modeIcon.className = \"fa fa-edit\";\n  }\n  sendToUser();\n}\n\nfunction reset() {\n  for (var i = 1; i <= areaCount; i++) {\n    var id = \"r\" + i;\n    var area = \"A0\" + i;\n    document.getElementById(area).style.backgroundColor = \"#d3d3d3\";\n    document.getElementById(id).checked = false;\n  }\n  sendToNodered();\n  updateSectionCount();\n  sendToUser();\n}\n\nfunction parking(receive) {\n  var car = document.getElementsByClassName(\"car\");\n  var area = receive.split(\"\");\n  for (var i = 0; i < areaCount; i++) {\n    var car = document.getElementsByClassName(\"car\")[i];\n    if (area[i] == 1 && car.className == \"car in\") {\n      car.className = \"car out\";\n    } else if (area[i] == 0) {\n      car.className = \"car in\";\n    }\n  }\n}\n\nfunction addSection() {\n  var sectionPopMenu = document.getElementsByClassName(\n    \"sectionList-add-popmenu\"\n  )[0];\n  var sectionAdd = document.getElementById(\"section-add\");\n  // alert(sectionPopMenu.className == \"sectionList-add-popmenu show\");\n  if (sectionPopMenu.className == \"sectionList-add-popmenu show\") {\n    sectionAdd.innerHTML =\n      '<i class=\"fa fa-plus-square-o\" aria-hidden=\"true\"></i>';\n    sectionPopMenu.className = \"sectionList-add-popmenu hide\";\n    setTimeout(function () {\n      sectionPopMenu.className = sectionPopMenu.className.replace(\n        \"sectionList-add-popmenu hide\",\n        \"sectionList-add-popmenu\"\n      );\n    }, 500);\n  } else {\n    sectionPopMenu.className = \"sectionList-add-popmenu show\";\n    sectionAdd.innerHTML =\n      '<i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>';\n  }\n}\n\nfunction modifySection() {\n  var sectionList = document.getElementsByClassName(\"section-list\")[0];\n  var sectionItem = document.getElementsByClassName(\"section-item\");\n  var sectionCircle = document.getElementsByClassName(\"section-circle\");\n  var sectionName = document.getElementsByClassName(\"section-name\");\n  var edit = document.getElementsByClassName(\"edit\")[0].style;\n  var sectionModify = document.getElementById(\"section-modify\");\n\n  if (edit.maxHeight) {\n    edit.maxHeight = null;\n    sectionModify.innerHTML = '<i class=\"fa fa-edit\" aria-hidden=\"true\"></i>';\n  } else {\n    edit.maxHeight =\n      document.getElementsByClassName(\"edit\")[0].scrollHeight + \"px\";\n    for (let i = 0; i < sectionItem.length - 2; i++) {\n      sectionCircle[i].style.cursor = \"pointer\";\n      sectionCircle[i].setAttribute(\"onClick\", \"changeSection(event)\");\n      sectionName[i].innerHTML =\n        '<input type=\"text\" class = \"editName\" value=\"' +\n        sectionName[i].innerHTML +\n        '\">';\n      var button = document.createElement(\"div\");\n      button.classList.add(\"removeButton\");\n      button.innerHTML = '<i class=\"fa fa-trash\" aria-hidden=\"true\"></i>';\n      button.setAttribute(\"onClick\", \"removeSection(event)\");\n      button.setAttribute(\"style\", \"cursor: pointer; margin-right : 15px\");\n      // sectionItem[i].appendChild(button);\n      sectionItem[i].insertBefore(button, sectionItem[i].childNodes[2]);\n    }\n    sectionModify.setAttribute(\"onClick\", \"\");\n    sectionModify.style.cursor = \"default\";\n    sectionModify.innerHTML =\n      '<i class=\"fa fa-angle-down\" aria-hidden=\"true\"></i>';\n  }\n  // var button = document.createElement(\"button\");\n  // button.id = \"sectionListChangeButton\";\n  // button.innerHTML = '<i class=\"fa fa-check\" aria-hidden=\"true\"></i>';\n  // button.setAttribute(\"onClick\", \"confirmSectionListModify()\");\n  // sectionList.appendChild(button);\n}\n\nfunction changeSection(event) {\n  var targetColor = getComputedStyle(event.target).backgroundColor;\n\n  for (let i = 0; i < allColorList.length; i++) {\n    if (allColorList[i] == rgbToHex(targetColor)) {\n      for (let j = 0; j < existColorList.length; j++) {\n        if (nameToHex(existColorList[j]) == allColorList[(i + 1) % 6]) {\n          i++;\n        }\n      }\n      event.target.style.backgroundColor = allColorList[(i + 1) % 6];\n      return;\n    }\n  }\n  sendToNodered();\n  sendToUser();\n}\n\nfunction removeSection(event) {\n  var sectionList = document.getElementsByClassName(\"section-list\")[0];\n  var color = document.getElementsByClassName(\"color\")[0];\n  var targetNode = event.target;\n  var parentNode = event.target.parentNode.parentNode;\n  var targetColor = getComputedStyle(\n    parentNode.children[0].children[0]\n  ).backgroundColor;\n\n  for (let i = 0; i < existColorList.length; i++) {\n    if (rgbToName(targetColor) === existColorList[i]) {\n      sectionList.removeChild(parentNode);\n      color.removeChild(color.children[i]);\n      existColorList.splice(i, 1);\n      existNameList.splice(i, 1);\n    }\n  }\n\n  for (var i = 1; i <= areaCount; i++) {\n    var id = \"r\" + i;\n    var area = \"A0\" + i;\n    var removedColor = document.getElementById(area).style.backgroundColor;\n    if (removedColor == targetColor) {\n      document.getElementById(area).style.backgroundColor = defaultColor;\n      document.getElementById(id).checked = false;\n    }\n  }\n  sendToNodered();\n  updateSectionCount();\n  sendToUser();\n}\n\nfunction confirmSectionListModify() {\n  var color = document.getElementsByClassName(\"color\")[0].children;\n  var sectionList = document.getElementsByClassName(\"section-list\")[0];\n  var sectionItem = document.getElementsByClassName(\"section-item\");\n  var sectionCircle = document.getElementsByClassName(\"section-circle\");\n  var sectionName = document.getElementsByClassName(\"section-name\");\n  var sectionNumber = document.getElementsByClassName(\"section-number\");\n  var edit = document.getElementsByClassName(\"edit\")[0].style;\n  var sectionModify = document.getElementById(\"section-modify\");\n\n  var previousColorList = existColorList;\n  existColorList = [];\n  existNameList = [];\n  for (let i = 0; i < sectionName.length - 2; i++) {\n    sectionCircle[i].style.cursor = \"default\";\n    sectionCircle[i].removeAttribute(\"onClick\");\n    var sectionColor = getComputedStyle(sectionCircle[i]).backgroundColor;\n    sectionColor = rgbToName(sectionColor);\n\n    sectionCircle[i].classList.remove(sectionCircle[i].classList[1]);\n    sectionNumber[i].classList.remove(sectionNumber[i].classList[1]);\n    sectionCircle[i].classList.add(\"circle-\" + sectionColor);\n    sectionNumber[i].classList.add(\"number-\" + sectionColor);\n\n    existColorList.push(sectionColor);\n    existNameList.push(sectionName[i].children[0].value);\n\n    color[i].classList.remove(color[i].classList[0]);\n    color[i].classList.add(sectionColor);\n    color[i].setAttribute(\n      \"onClick\",\n      'changeColor(\"' + nameToHex(sectionColor) + '\")'\n    );\n    color[i].style.backgroundColor = getComputedStyle(\n      sectionCircle[i]\n    ).backgroundColor;\n\n    sectionName[i].innerHTML = sectionName[i].children[0].value;\n    sectionItem[i].removeChild(sectionItem[i].childNodes[2]);\n\n    for (var j = 1; j <= areaCount; j++) {\n      var id = \"r\" + j;\n      var area = \"A0\" + j;\n      var areaColor = document.getElementById(area).style.backgroundColor;\n      if (rgbToHex(areaColor) == nameToHex(previousColorList[i])) {\n        document.getElementById(area).style.backgroundColor =\n          nameToHex(sectionColor);\n      }\n    }\n  }\n  sectionModify.setAttribute(\"onClick\", \"modifySection()\");\n  sectionModify.style.cursor = \"pointer\";\n  sectionModify.innerHTML = '<i class=\"fa fa-edit\" aria-hidden=\"true\"></i>';\n  edit.maxHeight = null;\n  // sectionList.removeChild(sectionList.lastChild);\n  sendToNodered();\n  sendToUser();\n}\n\nfunction confirmSectionListAdd() {\n  var colorList = document.getElementsByClassName(\n    \"sectionList-add-popmenu-color\"\n  )[0].children;\n  var sectionPopMenu = document.getElementsByClassName(\n    \"sectionList-add-popmenu\"\n  )[0];\n  var sectionList = document.getElementsByClassName(\"section-list\")[0];\n\n  var newSectionInput = document.getElementById(\"newSectionName\").value;\n  var newSectionColor =\n    document.getElementsByClassName(\"selectedColor\")[0].style.backgroundColor;\n  var colorCheck = document.getElementsByClassName(\"color-check\");\n  var sectionAdd = document.getElementById(\"section-add\");\n  for (let i = 0; i < existNameList.length; i++) {\n    if (existNameList[i] == newSectionInput) {\n      return alert(\"Name is duplicated!\");\n    }\n    if (existColorList[i] == rgbToName(newSectionColor)) {\n      return alert(\"Color is duplicated!\");\n    }\n  }\n\n  var newSectionItem =\n    sectionList.children[sectionList.children.length - 2].cloneNode(true);\n  newSectionItem.children[0].children[0].classList.remove(\"circle-default\");\n  newSectionItem.children[1].classList.remove(\"number-default\");\n  newSectionItem.children[0].children[0].classList.add(\n    \"circle-\" + rgbToName(newSectionColor)\n  );\n  newSectionItem.children[1].classList.add(\n    \"number-\" + rgbToName(newSectionColor)\n  );\n  newSectionItem.children[1].innerHTML = 0;\n  newSectionItem.children[0].children[1].childNodes[0].data = newSectionInput;\n  newSectionItem.children[0].children[0].style.backgroundColor =\n    newSectionColor;\n\n  existColorList.push(rgbToName(newSectionColor));\n  existNameList.push(newSectionInput);\n  sectionList.insertBefore(\n    newSectionItem,\n    sectionList.children[sectionList.children.length - 2]\n  );\n\n  var color = document.getElementsByClassName(\"color\")[0];\n  var li = color.children[0].cloneNode(true);\n  li.style.backgroundColor = newSectionColor;\n  li.classList.remove(li.classList[0]);\n  li.classList.add(rgbToName(newSectionColor));\n  li.attributes[1].nodeValue =\n    \"changeColor('\" + rgbToHex(newSectionColor) + \"')\";\n  color.insertBefore(li, color.children[color.children.length - 1]);\n\n  for (let i = 0; i < colorList.length; i++) {\n    colorList[i].classList.remove(\"selectedColor\");\n    colorCheck[i].style.display = \"none\";\n  }\n  sectionPopMenu.className = \"sectionList-add-popmenu hide\";\n  setTimeout(function () {\n    sectionPopMenu.className = sectionPopMenu.className.replace(\n      \"sectionList-add-popmenu hide\",\n      \"sectionList-add-popmenu\"\n    );\n  }, 500);\n  document.getElementById(\"newSectionName\").value = \"\";\n  sectionAdd.innerHTML =\n    '<i class=\"fa fa-plus-square-o\" aria-hidden=\"true\"></i>';\n\n    sendToUser();\n}\n\nfunction newColorSelect(event) {\n  var colorList = document.getElementsByClassName(\n    \"sectionList-add-popmenu-color\"\n  )[0].children;\n  var colorCheck = document.getElementsByClassName(\"color-check\");\n  var target = event.target;\n\n  for (let i = 0; i < colorCheck.length; i++) {\n    if (colorCheck[i].style.display == \"block\") {\n      colorList[i].classList.remove(\"selectedColor\");\n      colorCheck[i].style.display = \"none\";\n      break;\n    }\n  }\n  target.children[0].style.display = \"block\";\n  target.className = \"selectedColor\";\n}\n\nfunction closeAddPopMenu() {\n  var sectionAdd = document.getElementById(\"section-add\");\n  var colorList = document.getElementsByClassName(\n    \"sectionList-add-popmenu-color\"\n  )[0].children;\n  var colorCheck = document.getElementsByClassName(\"color-check\");\n  var sectionPopMenu = document.getElementsByClassName(\n    \"sectionList-add-popmenu\"\n  )[0];\n  sectionPopMenu.className = \"sectionList-add-popmenu hide\";\n  setTimeout(function () {\n    sectionPopMenu.className = sectionPopMenu.className.replace(\n      \"sectionList-add-popmenu hide\",\n      \"sectionList-add-popmenu\"\n    );\n  }, 500);\n  for (let i = 0; i < colorList.length; i++) {\n    colorList[i].classList.remove(\"selectedColor\");\n    colorCheck[i].style.display = \"none\";\n  }\n  document.getElementById(\"newSectionName\").value = \"\";\n  sectionAdd.innerHTML =\n    '<i class=\"fa fa-plus-square-o\" aria-hidden=\"true\"></i>';\n}\n\n\nfunction sendToNodered() {\n  var areaArr = [];\n  for (var i = 1; i <= areaCount; i++) {\n    var area = \"A0\" + i;\n    var backgroundColor = document.getElementById(area).style.backgroundColor;\n    var hex = rgbToHex(backgroundColor);\n    if (hex == redColor) {\n      areaArr[i - 1] = 1;\n    } else if (hex == greenColor) {\n      areaArr[i - 1] = 2;\n    } else if (hex == blueColor) {\n      areaArr[i - 1] = 3;\n    } else if (hex == yellowColor) {\n      areaArr[i - 1] = 4;\n    } else if (hex == purpleColor) {\n      areaArr[i - 1] = 5;\n    } else if (hex == cyanColor) {\n      areaArr[i - 1] = 6;\n    } else {\n      areaArr[i - 1] = 0;\n    }\n  }\n  var sendmsg = areaArr.join(\" \");\n  if (ws) {\n    ws.send(sendmsg);\n  }\n}\n\nfunction sendToUser() {\n  var areaArr = [];\n  for (var i = 1; i <= areaCount; i++) {\n    var area = \"A0\" + i;\n    var backgroundColor = document.getElementById(area).style.backgroundColor;\n    var hex = rgbToHex(backgroundColor);\n    if (hex == redColor) {\n      areaArr[i - 1] = 1;\n    } else if (hex == greenColor) {\n      areaArr[i - 1] = 2;\n    } else if (hex == blueColor) {\n      areaArr[i - 1] = 3;\n    } else if (hex == yellowColor) {\n      areaArr[i - 1] = 4;\n    } else if (hex == purpleColor) {\n      areaArr[i - 1] = 5;\n    } else if (hex == cyanColor) {\n      areaArr[i - 1] = 6;\n    } else {\n      areaArr[i - 1] = 0;\n    }\n  }\n  var area = areaArr.join(\"\");\n  var text = '{\"area\":\"'+area+'\", \"color\":\"'+existColorList+'\", \"name\":\"'+existNameList+'\"}';\n  if (ws) {\n    ws.send(text);\n  }\n}",
+        "output": "str",
+        "x": 430,
+        "y": 220,
+        "wires": [
+            [
+                "93c6a41c60057bcc"
+            ]
+        ]
+    },
+    {
+        "id": "93c6a41c60057bcc",
+        "type": "template",
+        "z": "4e61bceb49cf66cf",
+        "name": "css",
+        "field": "payload.css",
+        "fieldType": "msg",
+        "format": "css",
+        "syntax": "mustache",
+        "template": "body {\n  margin: 0;\n  background: #eaedf1;\n  font-family: \"Lato\", sans-serif;\n}\n.sidebar {\n  list-style-type: none;\n  background-color: #151521;\n  width: 20%;\n  padding: 0;\n  margin: 0;\n  position: fixed;\n  height: 100%;\n  overflow: auto;\n  top: 0;\n  display: block;\n  color: white;\n  z-index: 3;\n}\n.sidebar-menu {\n  padding-top: 15px;\n  padding-bottom: 15px;\n  padding-left: 20px;\n  padding-right: 20px;\n  font-weight: bold;\n  font-size: 30px;\n  /* border-bottom: white 1px dotted; */\n}\n.separator {\n  display: block;\n  height: 0;\n  border-bottom: 1px solid #2b2b40;\n}\n.section-ti {\n  display: inline-block;\n}\n.sectionList-change {\n  float: right;\n  display: inline-block;\n}\n\n#section-add,\n#section-modify {\n  display: inline-block;\n  border: 0;\n  cursor: pointer;\n  width: 1.8vw;\n  height: 1.5vw;\n  font-size: 25px;\n}\n\n.sectionList-add-popmenu {\n  display: none;\n  position: fixed;\n  width: 400px;\n  height: 200px;\n  left: 21%;\n  top: 1%;\n  border-radius: 10px;\n  text-align: center;\n  background: #151521;\n  z-index: 2;\n  color: white;\n}\n\n.sectionList-add-popmenu.show {\n  display: block;\n  animation: popin 0.5s;\n}\n\n.sectionList-add-popmenu.hide {\n  display: block;\n  animation: popout 0.5s;\n}\n\n.sectionList-add-popup-header {\n  margin: 15px 20px 5px 20px;\n  display: flex;\n  justify-content: space-between;\n}\n.sectionList-add-popup-title {\n  font-size: 20px;\n  display: inline-block;\n}\n.close-button {\n  display: inline-block;\n  cursor: pointer;\n}\n\n.sectionList-add-popmenu-color {\n  list-style: none;\n  margin: 0;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  padding-left: 0;\n  display: flex;\n  justify-content: center;\n  background-color: #1e1e2d;\n  border-radius: 10px;\n}\n.sectionList-add-popmenu-color li {\n  transition: all 0.2s;\n  cursor: pointer;\n  border: white 10px soild;\n  margin: 10px;\n  width: 40px;\n  height: 40px;\n  border-radius: 100%;\n  text-align: center;\n}\n\n.sectionList-add-popmenu-color li:hover {\n  filter: brightness(70%);\n}\n\n.color-check {\n  display: none;\n}\n\n.sectionList-add-confirm {\n  margin-top: 15px;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n\n#newSectionName {\n  width: 200px;\n  height: 32px;\n  font-size: 15px;\n  border: 0;\n  border-radius: 15px;\n  outline: none;\n  padding-left: 10px;\n  background-color: #1e1e2d;\n  color: white;\n}\n#sectionListAddButton {\n  border-radius: 20%;\n  margin-left: 10px;\n  cursor: pointer;\n}\n.removeButton {\n  border-radius: 10px;\n  margin-left: 6px;\n}\n\n.editName {\n  width: 100px;\n  height: 32px;\n  font-size: 20px;\n  border: 0;\n  border-radius: 10px;\n  outline: none;\n  padding-left: 10px;\n  background-color: rgb(233, 233, 233);\n}\n\n.edit {\n  margin-bottom: 20px;\n  text-align: center;\n  max-height: 0;\n  transition: max-height 0.2s ease-out;\n  overflow: hidden;\n}\n.editButton {\n  cursor: pointer;\n  padding: 5px;\n  border: white 1px solid;\n  border-radius: 10px;\n}\n\n.section-item {\n  background-color: #1e1e2d;\n  border-radius: 10px;\n  padding: 8px 15px;\n  font-size: 20px;\n  margin: 15px;\n  display: flex;\n  align-items: center !important;\n  justify-content: space-between;\n}\n.section-information {\n  display: flex;\n  align-items: center !important;\n}\n.section-item .section-circle {\n  display: inline-block;\n  width: 35px;\n  height: 35px;\n  border-radius: 10px;\n}\n.section-circle.circle-red {\n  background-color: #ff0000;\n}\n.section-circle.circle-green {\n  background-color: #00c700;\n}\n.section-circle.circle-blue {\n  background-color: #009dff;\n}\n.section-circle.circle-cyan {\n  background-color: #7fccde;\n}\n.section-circle.circle-yellow {\n  background-color: #f0d264;\n}\n.section-circle.circle-purple {\n  background-color: #cb99c5;\n}\n.section-circle.circle-default {\n  background-color: #d3d3d3;\n}\n.section-item .section-name {\n  margin-left: 10px;\n}\n.section-number {\n  font-size: 30px;\n}\nh1 {\n  position: fixed;\n  top: 0;\n  left: 20%;\n  right: 0;\n\n  height: 75px;\n  padding: 1rem;\n  color: white;\n  background: teal;\n  font-weight: bold;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  z-index: 1;\n}\n#mode-icon {\n  position: fixed;\n  top: 90px;\n  right: 20px;\n  font-size: 50px;\n  color: #5f5e5e;\n}\n\n.content {\n  padding: 20px 100px;\n  margin-top: 75px;\n  margin-left: 20%;\n}\n.view .col {\n  margin: 10px;\n  padding: 10px;\n  border-radius: 15px;\n  height: 100%;\n  background-color: #d3d3d3;\n  color: white;\n  transition: all 0.2s ease-in-out;\n  text-align: center;\n}\n.content .row {\n  margin-bottom: 3em;\n  height: 22em;\n}\n.col1 {\n  text-align: center;\n  font-size: 30px;\n}\n\n.col2 {\n  position: absolute;\n  left: 50%;\n  transform: translate(-50%, 0);\n  bottom: 15px;\n  font-size: 30px;\n}\n\n.row input[type=\"checkbox\"] {\n  display: none;\n}\n\n.row input[type=\"checkbox\"]:checked + .whatever {\n  box-shadow: 0 0 0 8px orange inset;\n  color: orange;\n}\n\n.row input[type=\"checkbox\"]:hover + .whatever {\n  transition: all 0.2s ease-in-out;\n  transform: scale(1.05);\n}\n\n.car {\n  visibility: hidden;\n  -webkit-user-drag: none;\n}\n\n.car.in {\n  visibility: visible;\n  animation: slidein 0.5s;\n  animation-fill-mode: forwards;\n}\n\n.car.out {\n  visibility: visible;\n  animation: slideout 0.5s;\n  animation-fill-mode: forwards;\n}\n\n.scale-setting {\n  cursor: pointer;\n}\n\n.reset {\n  cursor: pointer;\n}\n#snackbar {\n  visibility: hidden;\n  border: 2px solid #151521;\n  border-radius: 10px;\n  /* text-align: center; */\n  padding: 15px;\n  position: fixed;\n  z-index: 1;\n  left: 60%;\n  transform: translate(-50%, 0);\n  top: 20px;\n  background-color: white;\n  /* font-size: px; */\n  display: flex;\n  align-items: center !important;\n  color: #151521;\n  text-align: center;\n  font-weight: 500;\n  font-size: 30px;\n}\n\n#snackbar.show {\n  visibility: visible;\n  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;\n  animation: fadein 0.5s, fadeout 0.5s 2.5s;\n}\n\n.color-setting {\n  cursor: pointer;\n}\n\n.color-palette {\n  max-height: 0;\n  transition: max-height 0.2s ease-out;\n  overflow: hidden;\n}\n.choose-message {\n  position: relative;\n  text-align: center;\n  color: #5a5a88;\n}\n.color {\n  position: relative;\n  text-align: center;\n}\n.color li {\n  border: white 10px soild;\n  margin: 10px;\n  width: 40px;\n  height: 40px;\n  display: inline-block;\n  border-radius: 100%;\n  text-align: center;\n}\n.color li:hover {\n  filter: brightness(80%);\n  color: white;\n}\n.color li:active {\n  transition: all 0.05s ease-in-out;\n  transform: scale(0.8);\n}\n.color .red {\n  background: #ff0000;\n}\n.color .yellow {\n  background: #f0d264;\n}\n.color .green {\n  background: #00c700;\n}\n.color .cyan {\n  background: #7fccde;\n}\n.color .blue {\n  background: #009dff;\n}\n.color .purple {\n  background: #cb99c5;\n}\n.color .default {\n  background: #d3d3d3;\n}\n\n@-webkit-keyframes fadein {\n  from {\n    top: 0;\n    opacity: 0;\n  }\n  to {\n    top: 20px;\n    opacity: 1;\n  }\n}\n\n@keyframes fadein {\n  from {\n    top: 0;\n    opacity: 0;\n  }\n  to {\n    top: 20px;\n    opacity: 1;\n  }\n}\n\n@-webkit-keyframes fadeout {\n  from {\n    top: 20px;\n    opacity: 1;\n  }\n  to {\n    top: 0;\n    opacity: 0;\n  }\n}\n\n@keyframes fadeout {\n  from {\n    top: 20px;\n    opacity: 1;\n  }\n  to {\n    top: 0;\n    opacity: 0;\n  }\n}\n\n@keyframes slidein {\n  0% {\n    transform: translateY(100px);\n    opacity: 0;\n  }\n  100% {\n    transform: translateY(0);\n    opacity: 1;\n  }\n}\n\n@keyframes slideout {\n  0% {\n    transform: translateY(0);\n    opacity: 1;\n  }\n  100% {\n    transform: translateY(100px);\n    opacity: 0;\n  }\n}\n\n@keyframes popin {\n  from {\n    left: -500px;\n    opacity: 0;\n  }\n\n  to {\n    left: 21%;\n    opacity: 1;\n  }\n}\n\n@keyframes popout {\n  from {\n    left: 21%;\n    opacity: 1;\n  }\n\n  to {\n    left: -500px;\n    opacity: 0;\n  }\n}\n",
+        "output": "str",
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "eb1caf9b997869ac"
+            ]
+        ]
+    },
+    {
+        "id": "eb1caf9b997869ac",
+        "type": "template",
+        "z": "4e61bceb49cf66cf",
+        "name": "html",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en\" dir=\"ltr\">\n  <head>\n    <title>Parking Management</title>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <link\n      rel=\"stylesheet\"\n      href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css\"\n    />\n    <script src=\"https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js\"></script>\n    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js\"></script>\n    <link\n      rel=\"stylesheet\"\n      href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\"\n    />\n    <style>{{{payload.css}}}</style>\n    {{!--<link rel=\"stylesheet\" href=\"parking.css\" />--}}\n  </head>\n  <body onload=\"wsConnect();\" onunload=\"ws.disconnect();\">\n    <div class=\"\">\n      <ul class=\"sidebar\">\n        <div class=\"sidebar-menu\">\n          <div class=\"section-ti\">Section</div>\n          <!---->\n          <div class=\"sectionList-change\">\n            <div id=\"section-add\" onclick=\"addSection()\">\n              <i class=\"fa fa-plus-square-o\" aria-hidden=\"true\"></i>\n            </div>\n            <div id=\"section-modify\" onclick=\"modifySection()\">\n              <i class=\"fa fa-edit\" aria-hidden=\"true\"></i>\n            </div>\n          </div>\n          <!---->\n          <div class=\"section-list\">\n            <div class=\"section-item\">\n              <div class=\"section-information\">\n                <div class=\"section-circle circle-red\"></div>\n                <div class=\"section-name\">Student</div>\n              </div>\n              <div class=\"section-number number-red\">0</div>\n            </div>\n            <div class=\"section-item\">\n              <div class=\"section-information\">\n                <div class=\"section-circle circle-green\"></div>\n                <div class=\"section-name\">Professor</div>\n              </div>\n              <div class=\"section-number number-green\">0</div>\n            </div>\n            <div class=\"section-item\">\n              <div class=\"section-information\">\n                <div class=\"section-circle circle-blue\"></div>\n                <div class=\"section-name\">Visitor</div>\n              </div>\n              <div class=\"section-number number-blue\">0</div>\n            </div>\n            <div class=\"section-item\">\n              <div class=\"section-information\">\n                <div class=\"section-circle circle-default\"></div>\n                <div class=\"section-name\">No Section</div>\n              </div>\n              <div class=\"section-number number-default\">0</div>\n            </div>\n            <div class=\"section-item\">\n              <div class=\"section-name\">Total</div>\n              <div class=\"section-number number-total\">0</div>\n            </div>\n          </div>\n        </div>\n        <div\n          class=\"edit\"\n          id=\"sectionListChangeButton\"\n          onclick=\"confirmSectionListModify()\"\n        >\n          <i class=\"fa fa-check fa-2x editButton\" aria-hidden=\"true\"></i>\n        </div>\n        <div class=\"separator\"></div>\n        <div class=\"sidebar-menu color-setting\" onclick=\"openPalette()\">\n          Color Setting\n        </div>\n        <div class=\"color-palette\">\n          <div class=\"color\">\n            <li class=\"red\" onclick=\"changeColor('#ff0000')\"></li>\n            <li class=\"green\" onclick=\"changeColor('#00c700')\"></li>\n            <li class=\"blue\" onclick=\"changeColor('#009dff')\"></li>\n            <li class=\"default\" onclick=\"changeColor('#d3d3d3')\"></li>\n          </div>\n          <div class=\"choose-message\">\n            <p>Choose the parking spot first, <br />before choosing a color!</p>\n          </div>\n        </div>\n        <div class=\"separator\"></div>\n        <div class=\"sidebar-menu reset\" onclick=\"reset()\">Reset</div>\n        <div class=\"separator\"></div>\n      </ul>\n\n      <div class=\"sectionList-add-popmenu\">\n        <div class=\"sectionList-add-popup-header\">\n          <div class=\"sectionList-add-popup-title\">Add Section</div>\n          <div class=\"close-button\" onclick=\"closeAddPopMenu()\">\n            <i class=\"fa fa-times\" aria-hidden=\"true\"></i>\n          </div>\n        </div>\n        <ul class=\"sectionList-add-popmenu-color\">\n          <li\n            id=\"redSectionAdd\"\n            style=\"background-color: #ff0000\"\n            onclick=\"newColorSelect(event)\"\n          >\n            <i class=\"fa fa-check fa-2x color-check\" aria-hidden=\"true\"></i>\n          </li>\n          <li\n            id=\"greenSectionAdd\"\n            style=\"background-color: #00c700\"\n            onclick=\"newColorSelect(event)\"\n          >\n            <i class=\"fa fa-check fa-2x color-check\" aria-hidden=\"true\"></i>\n          </li>\n          <li\n            id=\"blueSectionAdd\"\n            style=\"background-color: #009dff\"\n            onclick=\"newColorSelect(event)\"\n          >\n            <i class=\"fa fa-check fa-2x color-check\" aria-hidden=\"true\"></i>\n          </li>\n          <li\n            id=\"yellowSectionAdd\"\n            style=\"background-color: #f0d264\"\n            onclick=\"newColorSelect(event)\"\n          >\n            <i class=\"fa fa-check fa-2x color-check\" aria-hidden=\"true\"></i>\n          </li>\n          <li\n            id=\"magentaSectionAdd\"\n            style=\"background-color: #cb99c5\"\n            onclick=\"newColorSelect(event)\"\n          >\n            <i class=\"fa fa-check fa-2x color-check\" aria-hidden=\"true\"></i>\n          </li>\n          <li\n            id=\"cyanSectionAdd\"\n            style=\"background-color: #7fccde\"\n            onclick=\"newColorSelect(event)\"\n          >\n            <i class=\"fa fa-check fa-2x color-check\" aria-hidden=\"true\"></i>\n          </li>\n        </ul>\n        <div class=\"sectionList-add-confirm\">\n          <input type=\"text\" id=\"newSectionName\" placeholder=\"Section Name\" />\n          <div id=\"sectionListAddButton\" onclick=\"confirmSectionListAdd()\">\n            <i class=\"fa fa-check fa-lg\" aria-hidden=\"true\"></i>\n          </div>\n        </div>\n      </div>\n\n      <h1>Smart Parking Lot <i id=\"title-icon\" class=\"fa fa-car\"></i></h1>\n      <div class=\"content\">\n        <i id=\"mode-icon\" class=\"fa fa-eye\"></i>\n        <div class=\"view row\">\n          <input type=\"checkbox\" id=\"r1\" onclick=\"selectSpot()\" disabled />\n          <label id=\"A01\" class=\"viewmode col\" for=\"r1\">\n            <div class=\"col1\">A01</div>\n            <img\n              src=\"./car.png\"\n              class=\"car\"\n              alt=\"car\"\n              height=\"80%\"\n              width=\"80%\"\n          /></label>\n          <input type=\"checkbox\" id=\"r2\" onclick=\"selectSpot()\" disabled />\n          <label id=\"A02\" class=\"viewmode col\" for=\"r2\"\n            ><div class=\"col1\">A02</div>\n            <img\n              src=\"./car.png\"\n              class=\"car\"\n              alt=\"car\"\n              height=\"80%\"\n              width=\"80%\"\n          /></label>\n          <input type=\"checkbox\" id=\"r3\" onclick=\"selectSpot()\" disabled />\n          <label id=\"A03\" class=\"viewmode col\" for=\"r3\"\n            ><div class=\"col1\">A03</div>\n            <img\n              src=\"./car.png\"\n              class=\"car\"\n              alt=\"car\"\n              height=\"80%\"\n              width=\"80%\"\n          /></label>\n          <input type=\"checkbox\" id=\"r4\" onclick=\"selectSpot()\" disabled />\n          <label id=\"A04\" class=\"viewmode col\" for=\"r4\"\n            ><div class=\"col1\">A04</div>\n            <img\n              src=\"./car.png\"\n              class=\"car\"\n              alt=\"car\"\n              height=\"80%\"\n              width=\"80%\"\n          /></label>\n        </div>\n        <div class=\"view row\">\n          <input type=\"checkbox\" id=\"r5\" onclick=\"selectSpot()\" disabled />\n          <label id=\"A05\" class=\"viewmode col\" for=\"r5\"\n            ><img\n              src=\"./car.png\"\n              class=\"car\"\n              alt=\"car\"\n              height=\"80%\"\n              width=\"80%\"\n            />\n            <div class=\"col2\">A05</div></label\n          >\n          <input type=\"checkbox\" id=\"r6\" onclick=\"selectSpot()\" disabled />\n          <label id=\"A06\" class=\"viewmode col\" for=\"r6\"\n            ><img\n              src=\"./car.png\"\n              class=\"car\"\n              alt=\"car\"\n              height=\"80%\"\n              width=\"80%\"\n            />\n            <div class=\"col2\">A06</div></label\n          >\n          <input type=\"checkbox\" id=\"r7\" onclick=\"selectSpot()\" disabled />\n          <label id=\"A07\" class=\"viewmode col\" for=\"r7\"\n            ><img\n              src=\"./car.png\"\n              class=\"car\"\n              alt=\"car\"\n              height=\"80%\"\n              width=\"80%\"\n            />\n            <div class=\"col2\">A07</div></label\n          >\n          <input type=\"checkbox\" id=\"r8\" onclick=\"selectSpot()\" disabled />\n          <label id=\"A08\" class=\"viewmode col\" for=\"r8\"\n            ><img\n              src=\"./car.png\"\n              class=\"car\"\n              alt=\"car\"\n              height=\"80%\"\n              width=\"80%\"\n            />\n            <div class=\"col2\">A08</div></label\n          >\n        </div>\n      </div>\n      <div id=\"snackbar\">\n        <div class=\"snackbar-item\">\n          <i id=\"snackbar-icon\" class=\"fa fa-edit\"></i> Color Setting Mode\n        </div>\n        <!-- <div class=\"color row\">\n          <li class=\"col btn red\" onclick=\"changeColor('#ff0000')\"></li>\n          <li class=\"col btn green\" onclick=\"changeColor('#00c700')\"></li>\n          <li class=\"col btn blue\" onclick=\"changeColor('#009dff')\"></li>\n          <li class=\"col btn default\" onclick=\"changeColor('#d3d3d3')\"></li>\n        </div> -->\n      </div>\n    </div>\n    <script>{{{payload.js}}}</script>\n    {{!--<script type=\"text/javascript\" src=\"parking.js\"></script>--}}\n  </body>\n</html>\n",
+        "output": "str",
+        "x": 670,
+        "y": 220,
+        "wires": [
+            [
+                "9b82adb60c0a7b63"
+            ]
+        ]
+    },
+    {
+        "id": "9b82adb60c0a7b63",
+        "type": "http response",
+        "z": "4e61bceb49cf66cf",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 790,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "13e1688ec66c3666",
+        "type": "websocket in",
+        "z": "4e61bceb49cf66cf",
+        "name": "",
+        "server": "04180a8d3193a792",
+        "client": "",
+        "x": 280,
+        "y": 340,
+        "wires": [
+            [
+                "ad8082b89cc2f30a"
+            ]
+        ]
+    },
+    {
+        "id": "5c45a6b2b5085572",
+        "type": "websocket out",
+        "z": "4e61bceb49cf66cf",
+        "name": "",
+        "server": "04180a8d3193a792",
+        "client": "",
+        "x": 530,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "ad8082b89cc2f30a",
+        "type": "switch",
+        "z": "4e61bceb49cf66cf",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "area",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 340,
+        "wires": [
+            [
+                "073e298aff6ceb79"
+            ],
+            [
+                "963160b2ac865a44"
+            ]
+        ]
+    },
+    {
+        "id": "5774fbe07170897a",
+        "type": "websocket out",
+        "z": "4e61bceb49cf66cf",
+        "name": "",
+        "server": "e8a574382610dca5",
+        "client": "",
+        "x": 810,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "073e298aff6ceb79",
+        "type": "function",
+        "z": "4e61bceb49cf66cf",
+        "name": "receive data",
+        "func": " return {payload: msg.payload};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 320,
+        "wires": [
+            [
+                "5774fbe07170897a"
+            ]
+        ]
+    },
+    {
+        "id": "cc45c503c9a9cb74",
+        "type": "comment",
+        "z": "4e61bceb49cf66cf",
+        "name": "http node and template(html, css, js) node for user",
+        "info": "http node and template(html, css, js) node for user",
+        "x": 370,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "a69325625e1ca2fb",
+        "type": "comment",
+        "z": "4e61bceb49cf66cf",
+        "name": "http node and template(html, css, js) node for manager",
+        "info": "http node and template(html, css, js) node for manager",
+        "x": 380,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "fe64902b8835ef57",
+        "type": "comment",
+        "z": "4e61bceb49cf66cf",
+        "name": "web socket node (from manager web)",
+        "info": "",
+        "x": 330,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6afafc1d10b14e27",
+        "type": "comment",
+        "z": "4e61bceb49cf66cf",
+        "name": "web socket node (to manager web)",
+        "info": "",
+        "x": 580,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "446d2b88bea124a0",
+        "type": "comment",
+        "z": "4e61bceb49cf66cf",
+        "name": "web socket node (to user web)",
+        "info": "",
+        "x": 870,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a38db0c526ba0eeb",
+        "type": "comment",
+        "z": "4e61bceb49cf66cf",
+        "name": "serial node (from arduino)",
+        "info": "",
+        "x": 310,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "4ca733660a3ddc63",
+        "type": "comment",
+        "z": "4e61bceb49cf66cf",
+        "name": "serial node (from arduino)",
+        "info": "",
+        "x": 670,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "fca96470a572316c",
+        "type": "ui_template",
+        "z": "eba5cf6ce12ef8e4",
+        "d": true,
+        "group": "6aeb6ccf14b443cd",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<h3>Testing template</h3>\n<p>{{msg.payload}}</p>\n<script>\n(function() {\n    var count = 0\n    function testit(msg,scope) {\n        count = count+1;\n        console.log(\"In testit \" + msg.payload + \"  count = \" + count);\n        scope.send({payload: \"from testit \" + msg.payload + \"  count = \" + count});\n    }\n    \n    (function(scope) {\n        scope.send({payload: \"preload\"});   // this gets sent when the view is opened in the browser\n        scope.$watch('msg', function(msg) {\n            if (msg) {\n                testit(msg, scope);\n            }\n        });\n    })(scope);\n})();\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 560,
+        "y": 140,
+        "wires": [
+            [
+                "686f426fd66ff6cd"
+            ]
+        ]
+    },
+    {
+        "id": "0448e5ec17e5986b",
+        "type": "inject",
+        "z": "eba5cf6ce12ef8e4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "One",
+        "payloadType": "str",
+        "x": 343,
+        "y": 140,
+        "wires": [
+            [
+                "fca96470a572316c"
+            ]
+        ]
+    },
+    {
+        "id": "a3b85356b2057c28",
+        "type": "ui_template",
+        "z": "eba5cf6ce12ef8e4",
+        "d": true,
+        "group": "6aeb6ccf14b443cd",
+        "name": "",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "format": "<h3>Testing template</h3>\n<p>{{msg.payload}}</p>\n<script>\n(function() {\n    var count = 0\n    function testit(msg,scope) {\n        count = count+1;\n        console.log(\"In testit \" + msg.payload + \"  count = \" + count);\n        scope.send({payload: \"from testit \" + msg.payload + \"  count = \" + count});\n    }\n    \n    (function(scope) {\n        scope.send({payload: \"preload\"});   // this gets sent when the view is opened in the browser\n        scope.$watch('msg', function(msg) {\n            if (msg) {\n                testit(msg, scope);\n            }\n        });\n    })(scope);\n})();\n</script>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 560.5,
+        "y": 252,
+        "wires": [
+            [
+                "bc24881485fc361e"
+            ]
+        ]
+    },
+    {
+        "id": "6797ffc86b39f0b2",
+        "type": "inject",
+        "z": "eba5cf6ce12ef8e4",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "Two",
+        "payloadType": "str",
+        "x": 341.5,
+        "y": 253,
+        "wires": [
+            [
+                "a3b85356b2057c28"
+            ]
+        ]
+    },
+    {
+        "id": "686f426fd66ff6cd",
+        "type": "debug",
+        "z": "eba5cf6ce12ef8e4",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 769,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "bc24881485fc361e",
+        "type": "debug",
+        "z": "eba5cf6ce12ef8e4",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 773,
+        "y": 252,
+        "wires": []
+    },
+    {
+        "id": "266aa7d2.820848",
+        "type": "change",
+        "z": "eba5cf6ce12ef8e4",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$base64decode($split(payload,\",\")[1])",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 1200,
+        "wires": [
+            [
+                "2756679c.c38ed8"
+            ]
+        ]
+    },
+    {
+        "id": "e80c63e9.b052e8",
+        "type": "inject",
+        "z": "eba5cf6ce12ef8e4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "data:text/plain;base64,c2FsdXQgICAuLmplIHN1aXMgSGFmc2EgQXJhYmJhdGU=",
+        "payloadType": "str",
+        "x": 310,
+        "y": 1140,
+        "wires": [
+            [
+                "266aa7d2.820848"
+            ]
+        ]
+    },
+    {
+        "id": "2756679c.c38ed8",
+        "type": "debug",
+        "z": "eba5cf6ce12ef8e4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "6757dc9f.792504",
+        "type": "inject",
+        "z": "67c61941.053d58",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "date"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 340,
+        "wires": [
+            [
+                "23f5cb94.03cb04"
+            ]
+        ]
+    },
+    {
+        "id": "fa1abaf4.885038",
+        "type": "template",
+        "z": "67c61941.053d58",
+        "name": "Image in",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<img src=\"data:image/png;base64,{{payload.img}}\"style=\"width=\"569\" height=\"197\"\"/>",
+        "output": "str",
+        "x": 640,
+        "y": 440,
+        "wires": [
+            [
+                "b42fd1dc.ba144"
+            ]
+        ]
+    },
+    {
+        "id": "b42fd1dc.ba144",
+        "type": "ui_template",
+        "z": "67c61941.053d58",
+        "group": "b586a8f7.e060e8",
+        "name": "RIO Logo",
+        "order": 8,
+        "width": "15",
+        "height": "15",
+        "format": "<div ng-bind-html=\"msg.payload\"></div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 900,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23f5cb94.03cb04",
+        "type": "file in",
+        "z": "67c61941.053d58",
+        "name": "",
+        "filename": "/Users/woo-jungkyun/Project/Purdue/Node-Red-Project/website-for-manager/img/car.png",
+        "format": "",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 550,
+        "y": 340,
+        "wires": [
+            [
+                "b83253e6.36f6a"
+            ]
+        ]
+    },
+    {
+        "id": "5c10bdf0.aa77f4",
+        "type": "comment",
+        "z": "67c61941.053d58",
+        "name": "On inject add the groov RIO logo to the dashboard",
+        "info": "",
+        "x": 220,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "b83253e6.36f6a",
+        "type": "base64",
+        "z": "67c61941.053d58",
+        "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 340,
+        "y": 440,
+        "wires": [
+            [
+                "89c3e3fb3629cfb0"
+            ]
+        ]
+    },
+    {
+        "id": "89c3e3fb3629cfb0",
+        "type": "function",
+        "z": "67c61941.053d58",
+        "name": "",
+        "func": "msg.payload.img = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 440,
+        "wires": [
+            [
+                "fa1abaf4.885038"
+            ]
+        ]
+    }
+]

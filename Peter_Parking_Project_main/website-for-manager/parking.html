@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Parking Management</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="parking.css" />
+  </head>
+  <body>
+    <div class="">
+      <ul class="sidebar">
+        <div class="sidebar-menu">
+          <div class="section-ti">Section</div>
+          <!---->
+          <div class="sectionList-change">
+            <div id="section-add" onclick="addSection()">
+              <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+            </div>
+            <div id="section-modify" onclick="modifySection()">
+              <i class="fa fa-edit" aria-hidden="true"></i>
+            </div>
+          </div>
+          <!---->
+          <div class="section-list">
+            <div class="section-item">
+              <div class="section-information">
+                <div class="section-circle circle-red"></div>
+                <div class="section-name">Student</div>
+              </div>
+              <div class="section-number number-red">0</div>
+            </div>
+            <div class="section-item">
+              <div class="section-information">
+                <div class="section-circle circle-green"></div>
+                <div class="section-name">Professor</div>
+              </div>
+              <div class="section-number number-green">0</div>
+            </div>
+            <div class="section-item">
+              <div class="section-information">
+                <div class="section-circle circle-blue"></div>
+                <div class="section-name">Visitor</div>
+              </div>
+              <div class="section-number number-blue">0</div>
+            </div>
+            <div class="section-item">
+              <div class="section-information">
+                <div class="section-circle circle-default"></div>
+                <div class="section-name">No Section</div>
+              </div>
+              <div class="section-number number-default">0</div>
+            </div>
+            <div class="section-item">
+              <div class="section-name">Total</div>
+              <div class="section-number number-total">0</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="edit"
+          id="sectionListChangeButton"
+          onclick="confirmSectionListModify()"
+        >
+          <i class="fa fa-check fa-2x editButton" aria-hidden="true"></i>
+        </div>
+        <div class="separator"></div>
+        <div class="sidebar-menu color-setting" onclick="openPalette()">
+          Color Setting
+        </div>
+        <div class="color-palette">
+          <div class="color">
+            <li class="red" onclick="changeColor('#ff0000')"></li>
+            <li class="green" onclick="changeColor('#00c700')"></li>
+            <li class="blue" onclick="changeColor('#009dff')"></li>
+            <li class="default" onclick="changeColor('#d3d3d3')"></li>
+          </div>
+          <div class="choose-message">
+            <p>Choose the parking spot first, <br />before choosing a color!</p>
+          </div>
+        </div>
+        <div class="separator"></div>
+        <div class="sidebar-menu reset" onclick="reset()">Reset</div>
+        <div class="separator"></div>
+      </ul>
+
+      <div class="sectionList-add-popmenu">
+        <div class="sectionList-add-popup-header">
+          <div class="sectionList-add-popup-title">Add Section</div>
+          <div class="close-button" onclick="closeAddPopMenu()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </div>
+        </div>
+        <ul class="sectionList-add-popmenu-color">
+          <li
+            id="redSectionAdd"
+            style="background-color: #ff0000"
+            onclick="newColorSelect(event)"
+          >
+            <i class="fa fa-check fa-2x color-check" aria-hidden="true"></i>
+          </li>
+          <li
+            id="greenSectionAdd"
+            style="background-color: #00c700"
+            onclick="newColorSelect(event)"
+          >
+            <i class="fa fa-check fa-2x color-check" aria-hidden="true"></i>
+          </li>
+          <li
+            id="blueSectionAdd"
+            style="background-color: #009dff"
+            onclick="newColorSelect(event)"
+          >
+            <i class="fa fa-check fa-2x color-check" aria-hidden="true"></i>
+          </li>
+          <li
+            id="yellowSectionAdd"
+            style="background-color: #f0d264"
+            onclick="newColorSelect(event)"
+          >
+            <i class="fa fa-check fa-2x color-check" aria-hidden="true"></i>
+          </li>
+          <li
+            id="magentaSectionAdd"
+            style="background-color: #cb99c5"
+            onclick="newColorSelect(event)"
+          >
+            <i class="fa fa-check fa-2x color-check" aria-hidden="true"></i>
+          </li>
+          <li
+            id="cyanSectionAdd"
+            style="background-color: #7fccde"
+            onclick="newColorSelect(event)"
+          >
+            <i class="fa fa-check fa-2x color-check" aria-hidden="true"></i>
+          </li>
+        </ul>
+        <div class="sectionList-add-confirm">
+          <input type="text" id="newSectionName" placeholder="Section Name" />
+          <div id="sectionListAddButton" onclick="confirmSectionListAdd()">
+            <i class="fa fa-check fa-lg" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+
+      <h1>Smart Parking Lot <i id="title-icon" class="fa fa-car"></i></h1>
+      <div class="content">
+        <i id="mode-icon" class="fa fa-eye"></i>
+        <div class="view row">
+          <input type="checkbox" id="r1" onclick="selectSpot()" disabled />
+          <label id="A01" class="viewmode col" for="r1">
+            <div class="col1">A01</div>
+            <img
+              src="./img/car.png"
+              class="car"
+              alt="car"
+              height="80%"
+              width="80%"
+          /></label>
+          <input type="checkbox" id="r2" onclick="selectSpot()" disabled />
+          <label id="A02" class="viewmode col" for="r2"
+            ><div class="col1">A02</div>
+            <img
+              src="./img/car.png"
+              class="car"
+              alt="car"
+              height="80%"
+              width="80%"
+          /></label>
+          <input type="checkbox" id="r3" onclick="selectSpot()" disabled />
+          <label id="A03" class="viewmode col" for="r3"
+            ><div class="col1">A03</div>
+            <img
+              src="./img/car.png"
+              class="car"
+              alt="car"
+              height="80%"
+              width="80%"
+          /></label>
+          <input type="checkbox" id="r4" onclick="selectSpot()" disabled />
+          <label id="A04" class="viewmode col" for="r4"
+            ><div class="col1">A04</div>
+            <img
+              src="./img/car.png"
+              class="car"
+              alt="car"
+              height="80%"
+              width="80%"
+          /></label>
+        </div>
+        <div class="view row">
+          <input type="checkbox" id="r5" onclick="selectSpot()" disabled />
+          <label id="A05" class="viewmode col" for="r5"
+            ><img
+              src="./img/car.png"
+              class="car"
+              alt="car"
+              height="80%"
+              width="80%"
+            />
+            <div class="col2">A05</div></label
+          >
+          <input type="checkbox" id="r6" onclick="selectSpot()" disabled />
+          <label id="A06" class="viewmode col" for="r6"
+            ><img
+              src="./img/car.png"
+              class="car"
+              alt="car"
+              height="80%"
+              width="80%"
+            />
+            <div class="col2">A06</div></label
+          >
+          <input type="checkbox" id="r7" onclick="selectSpot()" disabled />
+          <label id="A07" class="viewmode col" for="r7"
+            ><img
+              src="./img/car.png"
+              class="car"
+              alt="car"
+              height="80%"
+              width="80%"
+            />
+            <div class="col2">A07</div></label
+          >
+          <input type="checkbox" id="r8" onclick="selectSpot()" disabled />
+          <label id="A08" class="viewmode col" for="r8"
+            ><img
+              src="./img/car.png"
+              class="car"
+              alt="car"
+              height="80%"
+              width="80%"
+            />
+            <div class="col2">A08</div></label
+          >
+        </div>
+      </div>
+      <div id="snackbar">
+        <div class="snackbar-item">
+          <i id="snackbar-icon" class="fa fa-edit"></i> Color Setting Mode
+        </div>
+        <!-- <div class="color row">
+          <li class="col btn red" onclick="changeColor('#ff0000')"></li>
+          <li class="col btn green" onclick="changeColor('#00c700')"></li>
+          <li class="col btn blue" onclick="changeColor('#009dff')"></li>
+          <li class="col btn default" onclick="changeColor('#d3d3d3')"></li>
+        </div> -->
+      </div>
+    </div>
+    <script type="text/javascript" src="parking.js"></script>
+  </body>
+</html>
